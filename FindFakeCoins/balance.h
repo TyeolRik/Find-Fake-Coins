@@ -14,10 +14,16 @@ typedef enum {ERROR = -1, A, B, C, EQUAL_AB, EQUAL_BC, EQUAL_AC, EQUAL_ALL, SUCC
 typedef int coins; 
    
 //   // 초기화 시키는 루틴 (main 함수 내에 반드시 삽입시켜야 함) 
+// p: 불량 동전의 발생 확률
+// 100개의 동전이 생성된다.
 void initialize (int p); 
     
 // 양팔 저울 루틴 (A라는 배열과 B라는 배열을 parameter로 전달) 
 // 리턴 형태는 위의 status 자료형을 참조할 것 
+// a, b, c: 삼팔 저울 위에 올릴 세개의 동전 뭉치
+// 동전의 index값들을 해당 배열에 넣고, 배열의 끝에 -1을 넣어 배열의 끝을 명시한다.
+// 예) int a[5] = {1, 2, 3, -1};
+// balance를 호줄할 때마다 총 비교횟수와 비교결과가 출력된다.
 //status scale (int A[], int B[]); 
 int balance(int a[], int b[], int c[]);
 
